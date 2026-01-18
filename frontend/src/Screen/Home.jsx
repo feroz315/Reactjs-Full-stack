@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Cards from "../Components/Card";
 import HeaderBar from "../Components/HeaderBar";
 import Drawer from "../Components/Drawer";
 import { Box, Grid } from '@mui/material';
-// import { Box, Grid } from '@mui/material';
 import {
   Card,
   CardContent,
@@ -18,7 +17,6 @@ import Cardproduct from "../Components/Carditems";
 import { Row } from "react-bootstrap";
 import Navbar from "../Components/Navbar";
 import { IconBase } from "react-icons";
-import Clients from "../Components/Clients";
 import { useNavigate, Link } from "react-router-dom";
 
 
@@ -52,25 +50,6 @@ const navigate = useNavigate();
       <Navbar />
 
       <h1>Product Store</h1>
-      {/* {/* <div style={{ display: "flex" ,flexDirection: 'row', gap: '20px', padding: '20px', flexWrap:'wrap'  }}>
-        {dataItem.map(product => (
-          <div key={product.id}>
-              <Cardproduct
-                image={product.images}
-                title={product.title}
-                description={product.description}
-                category={product.category}
-                price={product.price}
-                buttonText="Add to Cart"
-                onButtonClick={() => navigate(`/details/${product.id}`)}
-              />
-        </div>
-        ))}
-        </div>
-        </div>
-         )
-        }
-         */}
                <Box mt={"20px"} width={"100%"}>
                       <Grid container spacing={2}> 
                         {dataItem.map((item, i) =>
@@ -92,7 +71,9 @@ const navigate = useNavigate();
                </div>
       )
                }
-         
+      
+               
+               
 export default Home;
 
 
